@@ -1,0 +1,158 @@
+--- -- --------- ------ -- --- ------ --------- --- ----- ---------- ---- --
+
+KIT OF NETWORKS' MODELS IN CPN TOOLS: Ethernet, IP, MPLS, Bluetooth, PBB, E6
+--- -- --------- ------ -- --- ------ --------- --- ----- ---------- ---- --
+
+++ special useful puzzle - PARAMETRIC MODEL of Ethernet
+
+Models were developed by (under supervision of) Dmitry A. Zaitsev 
+http://daze.ho.ua, http://member.acm.org/~daze
+
+CPN TOOLS site: http://cpntools.org
+
+--- -- --------- ------ -- --- ------ --------- --- ----- ---------- ---- -- 
+
+Ethernet Network
+----------------
+
+The model of a given network is composed of submodels of Ethernet switches, workstations and servers. It reflects the process of frames delivery by switches using the address table and the forwarding procedure.
+
+
+The model is described in
+
+Zaitsev D.A. An Evaluation of Network Response Time using a Coloured Petri Net Model of Switched LAN // Proceedings of Fifth Workshop and Tutorial on Practical Use of Coloured Petri Nets and the CPN Tools, October 8-11, 2004, Aarhus, Denmark, p. 157-167. 
+
+Zaitsev D.A. Switched LAN simulation by colored Petri nets // Mathematics and Computers in Simulation, vol. 65, no. 3, 2004, p. 245-249.
+
+Zaitsev D.A., Shmeleva T.R. Simulating Telecommunication Systems with CPN Tools: Students' book, Odessa: ONAT, 2006. 60 p.
+
+If you use this model for your research, please cite one of the above papers
+
+
+The model is used for the evaluating network response time directly during the process of simulation. The special submodel of measuring workstation calculates the individual response times for each query and the average network response time. The model is devised for the developing real-time systems and was applied on railway dispatcher center.
+
+File: ethz.cpn.zip
+
+--- -- --------- ------ -- --- ------ --------- --- ----- ---------- ---- --
+
+IP Network
+----------
+
+The model of a given IP network is composed of submodels of IP routers and terminal (customer) networks for generating traffic. Terminal networks provide random pairs of sender and receiver IP addresses into the specified address space. Static routing tables are used. 
+
+
+The model is described in
+
+Zaitsev D.A., Sakun A.L. An Evaluation of MPLS Efficacy using Colored Petri Net Models // Proc. of of International Middle Eastern Multiconference on Simulation and Modelling (MESM'2008), Amman (Jordan), August 26-28, 2008, p. 31-36.
+
+If you use this model for your research, please cite the above paper
+
+
+The model is used for checking and debugging IP routing tables, the performance evaluation of routers and the estimation of the network bandwidth and productivity. It could be employed in the automated design of IP networks. A case study is provided on the example of European backbone network.
+
+File: ipz.cpn.zip
+
+--- -- --------- ------ -- --- ------ --------- --- ----- ---------- ---- --
+
+MPLS Network
+------------
+
+The model of a given MPLS network is composed of submodels of LSR/LER routers and terminal (customer) networks for generating traffic. Static FEC/LSP allocation and label switching tables are used.
+
+
+The model is described in
+
+Zaitsev D.A., Sakun A.L. An Evaluation of MPLS Efficacy using Colored Petri Net Models // Proc. of of International Middle Eastern Multiconference on Simulation and Modelling (MESM'2008), Amman (Jordan), August 26-28, 2008, p. 31-36.
+
+If you use this model for your research, please cite the above paper
+
+
+The model is used for the performance evaluation of MPLS networks especially comparing IP networks as well as for the debugging label switching tables. It could be employed in the automated design of MPLS networks. A case study is provided on the example of European backbone network.
+
+File: mplsz.cpn.zip
+
+--- -- --------- ------ -- --- ------ --------- --- ----- ---------- ---- --
+
+Bluetooth Network
+-----------------
+
+The model of a given Bluetooth network is composed of submodels of the master and slave devices. The process of AMA reallocation is modeled as well as the data transmitting via ether. Static allocation of PMA is employed. 
+
+
+The model is described in
+
+Bereznyuk M.V., Gupta K.K., Zaitsev D.A. Effectiveness of Bluetooth Address Space Usage // Proceedings of 20th International Conference, Software & Systems Engineering and their Applications (ICSSEA 2007), Paris 4-6 December 2007. 
+
+If you use this model for your research, please cite the above paper
+
+
+The model is used for the evaluating the Bluetooth networks efficiency. It was shown that the process of AMA addresses swapping leads to the considerable decrease of the effective productivity. The anomaly of the information exchange slipping under big number of slave devices was observed.
+
+File: bluetoothz.cpn.zip
+
+--- -- --------- ------ -- --- ------ --------- --- ----- ---------- ---- --
+
+Provider Backbone Bridge PBB
+----------------------------
+
+The model of a given PBB network is composed of submodels of PCB/PEB switches as well as Ethernet switches on periphery of network with attached terminal devices - workstations and servers. Dynamic filling in address tables of switches and the mapping of backbone MAC addresses into customer MAC addresses are implemented.
+
+
+The model is described in
+
+Vorobiyenko P.P., Guliaiev K.D., Zaitsev D.A., Shmeleva T.R. PBB Efficiency Evaluation via Colored Petri Net Models // Communications and Network, 2010, 2, 113-124 (DOI: 10.4236/cn.2010.22018). 
+
+New World-wide Networks Addressing Systems Development: Report on scientific-research work, state register number 0108U008900 / D.A. Zaitsev, T.R. Shmeleva, K.D. Guliaiev // Odessa: ONAT, 2009.– 124 p. In Ukr.
+
+If you use this model for your research, please cite one of the above papers
+
+
+The model is used for the performance evaluation of PBB switches and the estimation of the network bandwidth and QoS. Effective bandwidth is studied regarding inevitable broadcasting stipulated by PBB and Ethernet technology. It could be employed in the automated design of PBB networks. 
+
+File: pbbz.cpn.zip
+
+--- -- --------- ------ -- --- ------ --------- --- ----- ---------- ---- --
+
+Ethernet Network Parametric models
+----------------------------------
+
+Parametric model has constant structure for any given switched Ethernet network. It contains one copy of each component: switch, workstation, server. A given topology is put as the marking of dedicated places as well as the characteristics of hardware and software. Special tag is added to each token which reflects the location of the token within Ethernet network. 
+
+
+The model is described in
+
+Zaitsev D.A., Shmeleva T.R. A Parametric Colored Petri Net Model of a Switched Network // Int. J. Communications, Network and System Sciences, 2011, 4, 65-76 (doi:10.4236/ijcns.2011.41008). 
+
+Zaitsev D.A., Shmeleva T.R. Parametric Petri Net Model for Ethernet Performance and Qos Evaluation // Proc. of 16th Workshop on Algorithms and Tools for Petri Nets, September 25-26, 2009, University of Karlsruhe, Germany, p. 15-28. 
+
+If you use this model for your research, please cite one of the above papers
+
+
+The model is used for the evaluating the performance and quality of service (QoS) via special measuring fragments attached to the models of hardware and software. They provide the estimating such characteristics as the frame delivery time, the network response time, the average size of the switch internal buffer etc directly during the process of simulation. It is devised for CAD of real-time systems and was applied at railway dispatcher center.
+
+Files: ethparz.cpn.zip, ethparqosz.cpn.zip
+
+--- -- --------- ------ -- --- ------ --------- --- ----- ---------- ---- --
+
+E6 Network Dynamic Routing
+--------------------------
+
+The model of a given E6 network is composed of E6 switching-router (SRE6) submodels supplied with traffic generators. SRE6 model contains submodels of ports and routing procedures: SRE6port, RIPprocess, RIPupdate. Complex recursive functions are used to describe procedures of routing information processing. Routing tables are created and updated automatically.
+
+
+The model is described in
+
+Guliaiev K.D., Zaitsev D.A. Simulating E6 Networks Dynamic Routing // 9th International Workshop on Performability Modeling of Computer and Communication Systems (PMCCS-9), September 17-18, 2009, Eger (Hungary).
+
+New World-wide Networks Addressing Systems Development: Report on scientific-research work, state register number 0108U008900 / D.A. Zaitsev, T.R. Shmeleva, K.D. Guliaiev // Odessa: ONAT, 2009.– 124 p. In Ukr.
+
+If you use this model for your research, please cite one of the above papers
+
+
+The model is devised for the evaluating E6 networks efficiency and developing E6 dynamic routing distance-vector protocols (analog to IP RIP). Special technique is applied for the periodical turning off the devices to investigate the adaptation abilities of E6RIP to varying network structure and its parameters choice. The model could be applied at the dynamic routing protocols design and optimal choice of their parameters.
+
+File: e6ripz.cpn.zip
+
+--- -- --------- ------ -- --- ------ --------- --- ----- ---------- ---- --
+
+:-Z
